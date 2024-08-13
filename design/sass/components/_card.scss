@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+  background-color: $color--dark_grayish_blue;
+  border-radius: 10px;
+  padding: 4.8rem;
+  padding-bottom: 0;
+
+  position: relative;
+
+  @include flexCenter;
+  justify-content: flex-start;
+  gap: 3rem;
+
+  @media only screen and (max-width: 600px) {
+    padding: 4rem 3rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 4rem 2rem;
+  }
+
+  .advice {
+    color: $color--light_cyan;
+    font-weight: $fw--bolder;
+    text-align: center;
+    width: 40rem;
+
+    @media only screen and (max-width: 400px) {
+      width: 30rem;
+    }
+  }
+
+  .divider {
+    margin-bottom: 7.4rem;
+
+    @media only screen and (max-width: 400px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .dice {
+    background-color: $color--neon_green;
+    border-radius: 50%;
+    width: 6.2rem;
+    height: 6.2rem;
+    padding: 3.2rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.1s;
+
+    @include flexCenter;
+
+    &:active {
+      box-shadow: 0 0 30px 0 $color--neon_green;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.heading--senary {
+  text-transform: uppercase;
+  color: $color--neon_green;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
